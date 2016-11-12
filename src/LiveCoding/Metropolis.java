@@ -14,7 +14,7 @@ public class Metropolis {
 	
 	public static boolean isMetropolis(boolean isCapital,int inhabitants, double taxPerPersonAndMonth){
 	 
-		boolean isMetropolis= false;
+		//boolean isMetropolis= false;
 		double taxes = inhabitants * taxPerPersonAndMonth *12;
 		
 		/*if ((isCapital && inhabitants > 100000)
