@@ -7,7 +7,7 @@ public class grenzWertReihe {
 		double resultCurrent = 0;
 		double resultPrevious = 0;
 		double result = 0;
-		double resultOld =0;
+	//	double resultOld =0;
 		
 		//start with n=0; 
 		//resultCurrent = Math.pow(2, 0) + resultPrevious;

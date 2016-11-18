@@ -11,13 +11,13 @@ public class ggt{
 			System.out.println("This programm is just working with positive numbers");
 		}
 		else {
-			int solution = ggt (numberOne, numberTwo);
+			int solution = ggT (numberOne, numberTwo);
 			System.out.println("The ggt of " + numberOne + " and " + numberTwo + " is: " + solution );
 		}
 
 	}
 	
-	private static int ggt(int a, int b){
+	private static int ggT(int a, int b){
 		if (a == 1 || b == 1){
 			a = 1;
 			return a;

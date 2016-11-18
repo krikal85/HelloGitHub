@@ -12,8 +12,8 @@ public class Demo {
 		
 		int myFirstInteger = 10;
 		boolean myFirstBoolean = true;
-		float piApproxa = 3.14f;
-		double euler = 2.714;
+	//	float piApproxa = 3.14f;
+	//	double euler = 2.714;
 		String myString = "Das Programm ist am Ende";
 		
 		//default value
@@ -35,8 +35,8 @@ public class Demo {
 			
 			
 			//Übung
-			int a=9;
-			int b;
+		//	int a=9;
+			//int b;
 			
 			
 			
