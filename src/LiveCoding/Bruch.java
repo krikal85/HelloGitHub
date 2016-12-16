@@ -4,10 +4,12 @@ public class Bruch {
 	private int zaehler;
 	private int nenner;
 	
+	public static int anzahlObjekte;
 	//Konstruktor
 	public Bruch(int zaehler,int nenner){
 		this.zaehler = zaehler;
 		this.nenner = nenner;
+		anzahlObjekte++;
 	}
 	//getter - setter
 	public int getZaehler() {
@@ -27,8 +29,9 @@ public class Bruch {
 	}
 	//Methoden
 	public double toDecimal(){
-		int result = zaehler/nenner;
-		return result;
+		//double result = (double)zaehler/nenner;
+		return zaehler *1.0/nenner;
+		//return result;
 	}
 	
 	public void print(){
@@ -39,19 +42,16 @@ public class Bruch {
 		
 		//b2.zaehler = b2.zaehler*b2.zaehler;
 		//b2.nenner=b2.nenner*b2.nenner;
-		Bruch result = new Bruch(b2.zaehler*b2.zaehler,b2.nenner*b2.nenner);
+		Bruch result = new Bruch(this.zaehler*b2.zaehler,this.nenner*b2.nenner);
 		//result = result.multiplicate(result);
 		return result;
 	}
 	
 	public Bruch multiplicate(Bruch b2,Bruch b3){
 		
-		Bruch result = new Bruch(b2.zaehler*b3.zaehler,b2.nenner*b3.nenner);
-		result = result.multiplicate(result);
+		Bruch result = new Bruch(this.zaehler*b2.zaehler*b3.zaehler,this.nenner*b2.nenner*b3.nenner);
+		//result = result.multiplicate(result);
 		
-		//.zaehler = b2.zaehler*b3.zaehler;
-		//b2.nenner=b2.nenner*b3.nenner;
-		//b2 = b2.multiplicate(b2);
 		return result;
 	}
 }

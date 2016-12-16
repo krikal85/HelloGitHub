@@ -22,13 +22,16 @@ public class Bonusberechnung {
 	}
 
 	public double getGehalt() {
+		//this.gehalt = gehalt;
+		gehalt = (gehalt *12);
+		//System.out.println("Get1 "+gehalt);
+		double gehalt = this.gehalt-(this.gehalt*20/100);
+		//System.out.println("Get "+gehalt);
 		return gehalt;
 	}
 
 	public void setGehalt(double gehalt) {
-		this.gehalt = gehalt;
-		gehalt = (gehalt *12);
-		gehalt = gehalt-(gehalt*(20/100));
+		
 		
 	}
 
@@ -45,8 +48,70 @@ public class Bonusberechnung {
 	}
 	
 	public double monatsAbrechnung(){
-		return getGehalt();
+		double gehalt2 = getGehalt();
+		//System.out.println("Monat "+gehalt2);
+		//gehalt = 22400;
+		double newSteuer = steuer(gehalt2);
+		//System.out.println("newSteuer "+newSteuer);
 		
+		return newSteuer;
+		
+	}
+	
+	public double jahresAbrechung(){
+		double result = 12 * monatsAbrechnung();
+		return result;
+	}
+	
+	public double jahresAbrechung(int monate){
+		double result = monate * monatsAbrechnung();
+		return result;
+	}
+	
+	private double steuer(double wert){
+		double steuer= 0;
+		if (wert> 50000){
+			steuer = wert - 50000;
+			steuer = wert -(steuer*60/100) - 9000 - 3200 - 2000 - 1000; 		
+			
+		}
+		else if (wert > 30000 
+				&& wert <50000){
+			steuer = wert - 30000;
+			steuer = (wert -(steuer*45/100) -3200 - 2000 - 1000)/12;
+			
+		}
+		else if (wert > 20000 
+				&& wert <30000){
+			//System.out.println("größer 20");
+			steuer = wert - 20000;
+			//System.out.println("minus 2000 "+steuer);
+			steuer = (wert -(steuer*32/100) - 2000 - 1000)/12;
+			
+		}
+		else if (wert > 20000 
+				&& wert <30000){
+			steuer = wert - 20000;
+			steuer = (wert -(steuer*32/100) - 2000 - 1000)/12;
+			
+		}
+		else if (wert > 10000 
+				&& wert <20000){
+			steuer = wert - 20000;
+			steuer = (wert -(steuer*20/100)  - 1000)/12;
+			
+		}
+		else if (wert < 10000){
+			System.out.println("Unter 10000");
+			steuer = wert;
+			steuer = (wert -(steuer*10/100))/12;
+			
+		}
+		
+		
+		wert = steuer;
+
+		return wert;
 	}
 	
 }
