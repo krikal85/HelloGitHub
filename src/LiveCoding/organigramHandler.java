@@ -17,15 +17,19 @@ public class organigramHandler {
 	}
 	
 	public static String processHierarchy(Employee emp){
-		String chain = emp.getName()
-				+"["+emp.getRole()+ "]";
-		emp.getSubordinates();
-		if (emp.getSuperior()== null){
-			return chain;
+	//	String chain = emp.getName()
+		//		+"["+emp.getRole()+ "]";
+		//emp.getSubordinates();
+		if (emp.getSubordinates().isEmpty()){
+			return "-"+emp.getRole()+"{"+emp.getName()+"}\n";
 		}
-		else {
+		
+		String ausgabe = "+"+emp.getRole()+"{"+emp.getName()+"}\n";
+		
+		for(Employee e :emp.getSubordinates()){
 			
-			return chain + "->" + processHierarchy(emp.getSubordinates().get(0));
+			ausgabe = ausgabe + processHierarchy(e);
 		}
+		return ausgabe;
 	}
 }

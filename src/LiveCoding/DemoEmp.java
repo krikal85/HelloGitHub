@@ -16,10 +16,8 @@ public class DemoEmp {
 		employee2.add(employee4);
 		
 		organigramHandler organigram = new organigramHandler();
-		System.out.println(organigram.getChainOfCommand(employee4));
-		
-		
-		
+		System.out.println(organigram.processHierarchy(employee3));
+				
 		
 	}
 
