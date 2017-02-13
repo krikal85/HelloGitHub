@@ -1,4 +1,4 @@
-package LiveCoding;
+package Employee_prüfung;
 
 import java.util.ArrayList;
 
@@ -44,5 +44,9 @@ public class Employeemanager {
 		return found;
 		
 		
+	}
+	
+	public ArrayList<Employee> returnList(){
+		return employees;
 	}
 }
