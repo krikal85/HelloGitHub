@@ -1,4 +1,4 @@
-package org.campusblackjackprüfung;
+package org.campusblackjackprÃ¼fung;
 
 public class Player {
 	private String name;

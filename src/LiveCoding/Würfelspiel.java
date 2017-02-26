@@ -1,6 +1,6 @@
 package LiveCoding;
 
-public class Würfelspiel {
+public class WÃ¼rfelspiel {
 
 	public static void main(String[] args) {
 		

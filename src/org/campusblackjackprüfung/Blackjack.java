@@ -1,4 +1,4 @@
-package org.campusblackjackprüfung;
+package org.campusblackjackprÃ¼fung;
 
 import java.util.HashMap;
 import java.util.Map;

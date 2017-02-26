@@ -1,6 +1,6 @@
 package Pruefungsvorbereitung;
 
-public class Übungabend4 {
+public class Ãœbungabend4 {
 
 	public static void main(String[] args) {
 	//	System.out.println(countCharX("Hallo"));

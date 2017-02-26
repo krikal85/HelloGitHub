@@ -1,6 +1,6 @@
 package LiveCoding;
 
-public class grenzwertReiheLösung {
+public class grenzwertReiheLÃ¶sung {
 
 	public static void main(String[] args) {
 
