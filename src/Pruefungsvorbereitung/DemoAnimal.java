@@ -15,7 +15,7 @@ public class DemoAnimal {
 		nature.addAnimal(quaxi2);
 		System.out.println(nature.countColor("green"));
 		System.out.println(nature.getCountByColor());
-		System.out.println("Hallo");
+		System.out.println("Hallo 2");
 	}
 
 }
